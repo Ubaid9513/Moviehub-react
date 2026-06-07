@@ -1,0 +1,203 @@
+.cta {
+  padding: 80px 4%;
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 50% 100%, rgba(229, 9, 20, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta__inner {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 5vw, 52px);
+  letter-spacing: 0.04em;
+  line-height: 1.0;
+  color: var(--color-white);
+}
+
+.cta__subtitle {
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--color-gray-200);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Form */
+.cta__form {
+  width: 100%;
+  max-width: 580px;
+}
+
+.cta__form-row {
+  display: flex;
+  gap: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+.cta__input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.cta__email-input {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  background: var(--color-surface-2);
+  border: 2px solid var(--color-border);
+  border-right: none;
+  color: var(--color-white);
+  font-size: 16px;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.cta__email-input::placeholder {
+  color: var(--color-gray-300);
+}
+
+.cta__email-input:focus {
+  border-color: rgba(255,255,255,0.4);
+  background: #222;
+}
+
+.cta__email-input--error {
+  border-color: rgba(229, 9, 20, 0.7) !important;
+}
+
+.cta__error {
+  position: absolute;
+  left: 0;
+  bottom: -22px;
+  font-size: 12px;
+  color: #ff6b6b;
+}
+
+.cta__btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 28px;
+  height: 60px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: background var(--transition-fast);
+}
+
+.cta__btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.cta__btn-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Badges */
+.cta__badges {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.cta__badge {
+  font-size: 13px;
+  color: var(--color-gray-200);
+  font-weight: 500;
+}
+
+/* Success state */
+.cta__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  animation: ctaSuccessFade 0.5s ease both;
+}
+
+@keyframes ctaSuccessFade {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.cta__success-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+}
+
+.cta__success-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  letter-spacing: 0.04em;
+}
+
+.cta__success-sub {
+  font-size: 16px;
+  color: var(--color-gray-200);
+  max-width: 360px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 580px) {
+  .cta__form-row {
+    flex-direction: column;
+    gap: 10px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .cta__email-input {
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    height: 54px;
+  }
+
+  .cta__btn {
+    height: 54px;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+  }
+
+  .cta__error {
+    position: static;
+    display: block;
+    margin-top: 4px;
+  }
+}

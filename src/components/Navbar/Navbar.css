@@ -1,0 +1,105 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 4%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+  transition: background var(--transition-med), box-shadow var(--transition-med);
+}
+
+.navbar--scrolled {
+  background: rgba(0, 0, 0, 0.97);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.navbar__inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo-img {
+  height: 100px;
+  width: auto;
+  transition: opacity var(--transition-fast);
+}
+
+.navbar__logo:hover .navbar__logo-svg {
+  opacity: 0.85;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar__lang-select {
+  background: transparent;
+  border: 1px solid var(--color-gray-200);
+  color: var(--color-white);
+  padding: 6px 28px 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23fff' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  transition: border-color var(--transition-fast);
+}
+
+.navbar__lang-select:hover {
+  border-color: var(--color-white);
+}
+
+.navbar__lang-select option {
+  background: #141414;
+  color: var(--color-white);
+}
+
+.navbar__signin-btn {
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 7px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.navbar__signin-btn:hover {
+  background: var(--color-accent-hover);
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 5%;
+    height: 56px;
+  }
+
+  .navbar__logo-svg {
+    height: 20px;
+  }
+
+  .navbar__lang-select {
+    display: none;
+  }
+}
