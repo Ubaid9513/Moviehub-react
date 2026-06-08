@@ -1,30 +1,22 @@
-import { useState, useEffect } from 'react'
 import './Navbar.css'
+
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <nav className="navbar">
       <div className="navbar__inner">
-        {/* Moviehub Logo */}
         <a href="#" className="navbar__logo">
-          <h1 className="navbar__logo-h1">Moviehub</h1>
+          <h1 className="navbar__logo-h1">MovieHub</h1>
         </a>
 
         <div className="navbar__actions">
-          <select className="navbar__lang-select" aria-label="Language">
-            <option value="en">English</option>
-            <option value="ur">اردو</option>
+          <select className="navbar__lang-select">
+            <option>English</option>
+            <option>اردو</option>
           </select>
-          <a href="#" className="navbar__signin-btn">
+
+          <button className="navbar__signin-btn">
             Explore
-          </a>
+          </button>
         </div>
       </div>
     </nav>
