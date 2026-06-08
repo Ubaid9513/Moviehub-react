@@ -15,7 +15,7 @@ function MovieCard({ movie, rank }) {
         />
         <div className="movie-card__hover-overlay">
           <button className="movie-card__play-btn" aria-label={`Play ${movie.title}`}>
-            <svg viewBox="0 0 24 24" fill="currentColor">
+            <svg  fill="currentColor">
               <path d="M8 5v14l11-7z"/>
             </svg>
           </button>
@@ -52,7 +52,7 @@ function Trending() {
             onClick={() => scroll(-1)}
             aria-label="Scroll left"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor">
+            <svg  fill="currentColor">
               <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
             </svg>
           </button>
@@ -61,7 +61,7 @@ function Trending() {
             onClick={() => scroll(1)}
             aria-label="Scroll right"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor">
+            <svg fill="currentColor">
               <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
             </svg>
           </button>

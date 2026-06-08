@@ -5,11 +5,6 @@ function Hero() {
     <section className="hero">
       {/* Background */}
       <div className="hero__bg">
-        <img
-          src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1920&h=1080&fit=crop&auto=format"
-          alt="Featured show bg"
-          className="hero__bg-img"
-        />
         <div className="hero__overlay" />
       </div>
 
@@ -22,7 +17,7 @@ function Hero() {
         </p>
 
         <div className="hero__cta-group">
-          <div className="hero__input-wrap">
+          <div className="hero__input-wraps">
             <input
               type="text"
               placeholder="Search movies..."
@@ -31,7 +26,7 @@ function Hero() {
           </div>
           <button className="hero__cta-btn">
             Explore Now
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="hero__cta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" className="hero__cta-icon">
               <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
             </svg>
           </button>
@@ -39,7 +34,7 @@ function Hero() {
       </div>
 
       {/* Bottom gradient for smooth transition */}
-      <div className="hero__bottom-fade" />
+      <div className="hero__bottom-fade"></div>
     </section>
   )
 }

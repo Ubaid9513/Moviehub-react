@@ -13,11 +13,11 @@ function FAQItem({ item, isOpen, onToggle }) {
         <span>{item.question}</span>
         <span className="faq-item__icon" aria-hidden="true">
           {isOpen ? (
-            <svg viewBox="0 0 24 24" fill="currentColor">
+            <svg fill="currentColor">
               <path d="M19 13H5v-2h14v2z"/>
             </svg>
           ) : (
-            <svg viewBox="0 0 24 24" fill="currentColor">
+            <svg  fill="currentColor">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
             </svg>
           )}

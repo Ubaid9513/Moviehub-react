@@ -23,7 +23,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__inner">
-        <a href="tel:+1-800-585-7265" className="footer__phone">
+        <a href="#" className="footer__phone">
           Questions? Call 5-7344-643-3245
         </a>
 
@@ -43,13 +43,13 @@ function Footer() {
         </div>
 
         <div className="footer__lang-select-wrap">
-          <select className="footer__lang-select" aria-label="Language">
+          <select className="footer__lang-select" >
             <option value="en">English</option>
             <option value="ur">اردو</option>
           </select>
         </div>
 
-        <p className="footer__copy">Moviehub Pakistan</p>
+        <p className="footer__copy">Moviehub Pakistan @ Copyright</p>
       </div>
     </footer>
   )
