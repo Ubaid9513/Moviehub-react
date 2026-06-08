@@ -13,9 +13,9 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner">
-        {/* Moviehub Logo SVG */}
+        {/* Moviehub Logo */}
         <a href="#" className="navbar__logo">
-          <img src={logo} alt="MovieHub Logo" className="navbar__logo-img" />
+          <h1 className="navbar__logo-h1">Moviehub</h1>
         </a>
 
         <div className="navbar__actions">

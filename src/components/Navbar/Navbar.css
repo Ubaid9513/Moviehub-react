@@ -30,8 +30,8 @@
   align-items: center;
 }
 
-.navbar__logo-img {
-  height: 100px;
+.navbar__logo-h1 {
+  color: crimson;
   width: auto;
   transition: opacity var(--transition-fast);
 }

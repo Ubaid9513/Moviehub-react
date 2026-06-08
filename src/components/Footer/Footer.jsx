@@ -46,7 +46,6 @@ function Footer() {
           <select className="footer__lang-select" aria-label="Language">
             <option value="en">English</option>
             <option value="ur">اردو</option>
-            <option value="hi">हिन्दी</option>
           </select>
         </div>
 

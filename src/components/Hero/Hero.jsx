@@ -7,7 +7,7 @@ function Hero() {
       <div className="hero__bg">
         <img
           src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1920&h=1080&fit=crop&auto=format"
-          alt="Featured show background"
+          alt="Featured show bg"
           className="hero__bg-img"
         />
         <div className="hero__overlay" />
